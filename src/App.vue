@@ -12,6 +12,7 @@ const job = ref({}) ;
 const handleSearch = () => {
   const url = "http://localhost:3000/api/scrape";
   isLoading.value = true ;
+  isData.value = false ;
   axios.post(url, { search: search.value })
     .then((response) => {
       isLoading.value = false
