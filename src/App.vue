@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import ResultContainer from './components/ResultContainer.vue';
 import NavBarComponent from '@/components/globals/NavBarComponent.vue'
+import FooterComponent from './components/globals/FooterComponent.vue';
 
 const search = ref('');
 const isLoading = ref(false);
@@ -59,6 +60,7 @@ const handleSearch = () => {
 
     </div>
   </div>
+  <FooterComponent />
 </template>
 
 <style>
@@ -69,12 +71,14 @@ const handleSearch = () => {
   text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
-  background-color: black;
   color: antiquewhite;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .body {
   margin-top: 10%;
+}
+#body {
+  background-color: black;
 }
 </style>
