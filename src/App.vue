@@ -5,6 +5,7 @@ import axios from 'axios';
 import ResultContainer from './components/ResultContainer.vue';
 import NavBarComponent from '@/components/globals/NavBarComponent.vue'
 import FooterComponent from './components/globals/FooterComponent.vue';
+import DescriptionComponent from './components/DescriptionComponent.vue'
 
 const search = ref('');
 const isLoading = ref(false);
@@ -45,7 +46,7 @@ const handleSearch = () => {
         <div class="col-10">
           <input type="text" class="form-control" v-model="search" placeholder="Saisissez l'url du du job">
         </div>
-        <button type="submit" class="btn btn-primary col-2">Collecter</button>
+        <button type="submit" class="btn btn-primary col-2" :disabled="isLoading">Collecter</button>
       </div>
     </form>
     <div class="">
@@ -60,6 +61,7 @@ const handleSearch = () => {
 
     </div>
   </div>
+  <DescriptionComponent />
   <FooterComponent />
 </template>
 
@@ -68,7 +70,6 @@ const handleSearch = () => {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
   color: antiquewhite;
@@ -77,6 +78,7 @@ const handleSearch = () => {
 
 .body {
   margin-top: 10%;
+  text-align: center;
 }
 #body {
   background-color: black;

@@ -77,7 +77,10 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 30px;
-    margin-top: 8%;
+}
+
+.a {
+    color: #fff;
 }
 
 .container {
