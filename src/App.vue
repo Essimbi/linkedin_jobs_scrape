@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import axios from 'axios';
 
 import ResultContainer from './components/ResultContainer.vue';
+import NavBarComponent from '@/components/globals/NavBarComponent.vue'
 
 const search = ref('');
 const isLoading = ref(false);
@@ -36,6 +37,7 @@ const handleSearch = () => {
 </script>
 
 <template>
+  <NavBarComponent />
   <div class="container align-items-center justify-content-center body">
     <form @submit.prevent="handleSearch">
       <div class="container row align-items-center justify-content-center">
@@ -66,10 +68,13 @@ const handleSearch = () => {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+  background-color: black;
+  color: antiquewhite;
+  height: 100vh;
 }
 
 .body {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 </style>
