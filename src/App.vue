@@ -46,7 +46,7 @@ const handleSearch = () => {
         <div class="col-10">
           <input type="text" class="form-control" v-model="search" placeholder="Saisissez l'url du du job">
         </div>
-        <button type="submit" class="btn btn-primary col-2" :disabled="isLoading">Collecter</button>
+        <button type="submit" class="button col-2" :disabled="isLoading">Collecter</button>
       </div>
     </form>
     <div class="">
@@ -81,6 +81,14 @@ const handleSearch = () => {
   text-align: center;
 }
 #body {
-  background-color: black;
+  background-color: #0d1523;
 }
+
+.button {
+  color: #e4e0ea;
+  background-color: #81c0ee;
+  height: 5vh;
+  border-radius: 5%;
+}
+
 </style>

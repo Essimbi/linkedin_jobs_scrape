@@ -1,6 +1,6 @@
 <template>
-    <section class="bg-primary">
-        <div class="container">
+    <section class="">
+        <div class="container p-1 mt-2">
 
             <div class="row">
                 <div class="col-6 col-md-8 mb-3">
@@ -32,8 +32,10 @@ section {
     display: flex;
     align-items: center;
     padding: 20px;
-    background: #333;
+    /* background: #81c0ee; */
     margin-top: 8%;
     opacity: 0.7;
+    border: 0.5px solid #81c0ee;
+    border-top-right-radius: 50%;
 }
 </style>
