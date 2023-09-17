@@ -1,5 +1,5 @@
 <template>
-    <section class="">
+    <section>
         <div class="container p-1 mt-2">
 
             <div class="row">
@@ -23,9 +23,6 @@
     </section>
 </template>
   
-<script setup>
-
-</script>
   
 <style scoped>
 section {
@@ -33,7 +30,7 @@ section {
     align-items: center;
     padding: 20px;
     /* background: #81c0ee; */
-    margin-top: 8%;
+    margin-top: 4%;
     opacity: 0.7;
     border: 0.5px solid #81c0ee;
     border-top-right-radius: 50%;
