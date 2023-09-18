@@ -1,11 +1,25 @@
 <template>
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="card">
+        <div class="content">
+            <div id="message">
+                <p>
+                    
+                </p>
             </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+.card {
+    font-size: 10px;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    font-size: 5px;
+}
+#message {
+    font-size: 5px;
+}
+</style>

@@ -1,16 +1,20 @@
 <script setup>
 import CardComponent from './CardComponent.vue';
+import VueAIcarousel from 'vue-ai-carousel'
 
+const cards = [
+    { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }
+]
 </script>
 
 <template>
     <section>
         <div class="container">
             <hr>
-            <div class="row mt-4 p-4">
-                <CardComponent />
-                <CardComponent />
-                <CardComponent />
+            <div class="container row mt-4 p-4 col-8">
+                <VueAIcarousel :Property="{ ID: 'Unique_id', Dlay: 1000 }" :options="{ itemsPerSlide: 3, loop: true }">
+                    <CardComponent v-for="card in cards" :key="card.id" />
+                </VueAIcarousel>
             </div>
             <hr>
         </div>
@@ -27,51 +31,9 @@ section {
     opacity: 0.7;
 
 }
+
+.row {
+    margin-left: 15%;
+}
+
 </style>
-
-<!-- <template>
-    <section>
-
-        <vue-slider :options="sliderOptions">
-        </vue-slider>
-
-        <div class="cards">
-
-            <div v-for="card in cards" :key="card.id" class="card">
-
-                <CardComponent />
-
-            </div>
-
-        </div>
-
-    </section>
-</template>
-  
-<script setup>
-import VueSlider from 'vue-slider-component'
-
-import CardComponent from './CardComponent.vue';
-
-const cards = [
-    { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }
-]
-
-const sliderOptions = {
-  // ...
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  infinite: false,
-  dots: true
-}
-</script>
-  
-<style scoped>
-.cards {
-    overflow: hidden;
-}
-
-.card {
-    width: 100%;
-}
-</style> -->
